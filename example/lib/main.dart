@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
+import 'package:flutter_full_pdf_viewer_null_safe/flutter_full_pdf_viewer.dart';
 import 'package:flutter_html_to_pdf/flutter_html_to_pdf.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -71,7 +71,8 @@ class _MyAppState extends State<MyApp> {
     final targetPath = appDocDir.path;
     final targetFileName = "example-pdf";
 
-    final generatedPdfFile = await FlutterHtmlToPdf.convertFromHtmlContent(htmlContent, targetPath, targetFileName);
+    final generatedPdfFile = await FlutterHtmlToPdf.convertFromHtmlContent(
+        htmlContent, targetPath, targetFileName);
     generatedPdfFilePath = generatedPdfFile.path;
   }
 
@@ -86,7 +87,10 @@ class _MyAppState extends State<MyApp> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PDFViewerScaffold(appBar: AppBar(title: Text("Generated PDF Document")), path: generatedPdfFilePath)),
+              MaterialPageRoute(
+                  builder: (context) => PDFViewerScaffold(
+                      appBar: AppBar(title: Text("Generated PDF Document")),
+                      path: generatedPdfFilePath)),
             );
           },
         ),
