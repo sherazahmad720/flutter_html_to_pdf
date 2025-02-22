@@ -25,7 +25,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 35
+    com.afur.flutter_html_to_pdf
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
