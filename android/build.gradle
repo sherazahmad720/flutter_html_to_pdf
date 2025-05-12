@@ -25,6 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'io.flutter.plugins.flutter_html_to_pdf'
     compileSdkVersion 33
 
     compileOptions {
